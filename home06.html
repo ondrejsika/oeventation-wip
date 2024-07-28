@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.myportfolio.com/15080cb3-902f-4deb-9564-ebf766d9d363/a9a3fe94-71ee-4304-bb7a-fb83e33a7648.jpg?h=6a28fa5216bae75923c3599ab54b720e') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .verified-badge {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+        }
+        .profile-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .profile-stats div {
+            text-align: center;
+        }
+        .profile-stats div span {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .bio {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .contact-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .contact-info h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: calc(33.333% - 10px);
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            .photos img {
+                width: calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container overlay">
+        <div class="profile-header">
+            <img src="https://static.sika.io/files/photos/ondrejsika4.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="profile-name">
+                Ondrej Sika
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge" class="verified-badge">
+            </div>
+            <div class="profile-stats">
+                <div>
+                    <span>150</span>
+                    Posts
+                </div>
+                <div>
+                    <span>300</span>
+                    Followers
+                </div>
+                <div>
+                    <span>180</span>
+                    Following
+                </div>
+            </div>
+        </div>
+        <div class="bio">
+            <p>Hello! I'm Ondrej Sika, a software engineer with a passion for building web applications. I love exploring new technologies and sharing my knowledge with the community.</p>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Website:</strong> <a href="https://www.example.com" style="color: #ffcc00;">www.example.com</a></p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Social:</strong> <a href="https://twitter.com/johndoe" style="color: #ffcc00;">Twitter</a>, <a href="https://linkedin.com/in/johndoe" style="color: #ffcc00;">LinkedIn</a></p>
+        </div>
+        <div class="photos">
+            <img src="https://via.placeholder.com/150" alt="Photo 1">
+            <img src="https://via.placeholder.com/150" alt="Photo 2">
+            <img src="https://via.placeholder.com/150" alt="Photo 3">
+            <img src="https://via.placeholder.com/150" alt="Photo 4">
+            <img src="https://via.placeholder.com/150" alt="Photo 5">
+            <img src="https://via.placeholder.com/150" alt="Photo 6">
+            <img src="https://via.placeholder.com/150" alt="Photo 7">
+            <img src="https://via.placeholder.com/150" alt="Photo 8">
+            <img src="https://via.placeholder.com/150" alt="Photo 9">
+        </div>
+    </div>
+</body>
+</html>
