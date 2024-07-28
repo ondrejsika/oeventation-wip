@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondrej Sika | OEVENTATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.myportfolio.com/15080cb3-902f-4deb-9564-ebf766d9d363/a9a3fe94-71ee-4304-bb7a-fb83e33a7648.jpg?h=6a28fa5216bae75923c3599ab54b720e') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin: 0 auto;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .verified-badge {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .social-icons a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .bio {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .events {
+            margin-top: 20px;
+        }
+        .events h2 {
+            font-size: 18px;
+        }
+        .event-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .event-details {
+            flex-grow: 1;
+        }
+        .event-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .event-info {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .rsvp {
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .going {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .not-going {
+            background-color: #f44336;
+            color: #fff;
+        }
+        .rsvp-toggle-button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #000;
+            margin-top: 10px;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: calc(33.333% - 10px);
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            .overlay {
+                border-radius: 0;
+                padding-top: 40px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .container {
+                margin: 0;
+                padding: 10px;
+            }
+            .photos img {
+                width: calc(50% - 10px);
+            }
+            .profile-name {
+                font-size: 20px;
+            }
+            .event-name {
+                font-size: 16px;
+            }
+            .event-info {
+                font-size: 12px;
+            }
+            .rsvp-toggle-button {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function toggleRsvp(button) {
+            if (button.classList.contains('going')) {
+                button.classList.remove('going');
+                button.classList.add('not-going');
+                button.textContent = 'Not Going';
+                button.style.backgroundColor = '#f44336';
+                button.style.color = '#fff';
+            } else {
+                button.classList.remove('not-going');
+                button.classList.add('going');
+                button.textContent = 'Going';
+                button.style.backgroundColor = '#4caf50';
+                button.style.color = '#fff';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container overlay">
+        <div class="profile-header">
+            <img src="https://static.sika.io/files/photos/ondrejsika4.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="profile-name">
+                Ondrej Sika
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verified Badge" class="verified-badge">
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://t.me/ondrejsika">
+                <img src="https://oe-icons.vercel.app/telegram.png" alt="Telegram">
+            </a>
+            <a href="https://www.instagram.com/ondrejsika">
+                <img src="https://oe-icons.vercel.app/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/ondrejsika">
+                <img src="https://oe-icons.vercel.app/twitter.png" alt="Twitter">
+            </a>
+        </div>
+        <div class="bio">
+            <p>Hello! I'm Ondrej Sika, a software engineer with a passion for building web applications. I love exploring new technologies and sharing my knowledge with the community.</p>
+        </div>
+        <div class="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-card">
+                <div class="event-details">
+                    <div class="event-name">Singles Party vol. 4</div>
+                    <div class="event-info">9. 8. 2024, 19:00 - 23:00, OE's</div>
+                </div>
+                <div class="rsvp going">Going</div>
+            </div>
+            <div class="event-card">
+                <div class="event-details">
+                    <div class="event-name">OE's B-Day Party</div>
+                    <div class="event-info">17. 8. 2024, 19:00 - 23:00, OE's</div>
+                </div>
+                <div class="rsvp not-going">Not Going</div>
+            </div>
+            <div class="event-card">
+                <div class="event-details">
+                    <div class="event-name">Heli Party</div>
+                    <div class="event-info">30. 9. 2024, 19:00 - 23:00, Helitom</div>
+                </div>
+                <button class="rsvp-toggle-button" onclick="toggleRsvp(this)">Are you going?</button>
+            </div>
+        </div>
+        <div class="photos">
+            <img src="https://via.placeholder.com/150" alt="Photo 1">
+            <img src="https://via.placeholder.com/150" alt="Photo 2">
+            <img src="https://via.placeholder.com/150" alt="Photo 3">
+            <img src="https://via.placeholder.com/150" alt="Photo 4">
+            <img src="https://via.placeholder.com/150" alt="Photo 5">
+            <img src="https://via.placeholder.com/150" alt="Photo 6">
+            <img src="https://via.placeholder.com/150" alt="Photo 7">
+            <img src="https://via.placeholder.com/150" alt="Photo 8">
+            <img src="https://via.placeholder.com/150" alt="Photo 9">
+        </div>
+    </div>
+</body>
+</html>
